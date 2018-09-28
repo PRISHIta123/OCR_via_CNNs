@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\PrishitaRay\\tensorflow-korean-recognition\\saved-model\\korean_tensorflow.chkp-0"
+all_model_checkpoint_paths: "C:\\Users\\PrishitaRay\\tensorflow-korean-recognition\\saved-model\\korean_tensorflow.chkp-0"

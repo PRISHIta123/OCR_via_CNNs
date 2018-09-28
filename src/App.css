@@ -1,0 +1,47 @@
+// App.css
+    body {
+      font-family: 'Roboto Condensed', serif;
+    }
+    .main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .lang_trans {
+      margin: 20px 40px;
+    }
+    h5 {
+      margin-bottom: 10px;
+    }
+    .user {
+      padding: 7px 15px;
+      border-radius: 4px;
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      background: #00CED1;
+      margin: 10px 0;
+    }
+
+    .button{
+     width:100px;
+     height:18px;
+     background-color:#00CED1 ;
+     padding:7px 15px;
+     border-radius:4px;
+     font-size:13px;
+     font-weight:bold;
+     color:white;
+     margin :10px 0;
+    }
+
+   .button:before{
+       content:"";
+       position:absolute;
+       width:0px;
+       height:0px;
+       border: 10px solid;
+       border-color: white transparent transparent transparent;
+       right:6px;
+       top:18px;
+    }
