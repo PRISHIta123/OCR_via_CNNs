@@ -1,0 +1,3 @@
+model_checkpoint_path: "C:\\Users\\PrishitaRay\\Desktop\\Language_Character_Classifier\\src\\Korean\\saved-model\\korean_tensorflow.chkp"
+all_model_checkpoint_paths: "C:\\Users\\PrishitaRay\\Desktop\\Language_Character_Classifier\\src\\Korean\\saved-model\\korean_tensorflow.chkp-0"
+all_model_checkpoint_paths: "C:\\Users\\PrishitaRay\\Desktop\\Language_Character_Classifier\\src\\Korean\\saved-model\\korean_tensorflow.chkp"
