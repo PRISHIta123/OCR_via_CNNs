@@ -15,10 +15,10 @@ def CLASSIFY():
 
     # Default paths.
     DEFAULT_LABEL_FILE = os.path.join(
-        SCRIPT_PATH, '../labels/2350-common-korean.txt'
+        SCRIPT_PATH, '../Korean/labels/2350-common-korean.txt'
     )
     DEFAULT_GRAPH_FILE = os.path.join(
-        SCRIPT_PATH, '../saved-model/optimized_korean_tensorflow.pb'
+        SCRIPT_PATH, '../Korean/saved-model/optimized_korean_tensorflow.pb'
     )
     def read_image(file):
         """Read an image file and convert it into a 1-D floating point array."""
@@ -32,9 +32,9 @@ def CLASSIFY():
         image = tf.reshape(image, [64*64])
         return image
 
-    label_file='./labels/2350-common-korean.txt'
+    label_file='./Korean/labels/2350-common-korean.txt'
     image='./New.jpeg'
-    graph_file='./saved-model/optimized_korean_tensorflow.pb'
+    graph_file='./Korean/saved-model/optimized_korean_tensorflow.pb'
     
 
     labels = io.open(label_file,
@@ -62,6 +62,7 @@ def CLASSIFY():
         predictions = graph_sess.run(y, feed_dict={x: image_array,
                                                    keep_prob: 1.0})
         prediction = predictions[0]
+    arr=[]
     # Get the indices that would sort the array, then only get the indices that
     # correspond to the top 5 predictions.
     sorted_indices = prediction.argsort()[::-1][:1]

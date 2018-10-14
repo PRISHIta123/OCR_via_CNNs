@@ -15,6 +15,47 @@ constructor(){
 
 };
 
+Choice1({nativeEvent}) {
+  var formData=new FormData();
+  var x=1;
+  formData.append("val",x);
+  var xhr=new XMLHttpRequest();
+  xhr.open('POST','http://127.0.0.1:5000/val',true);
+  xhr.send(formData);
+}
+Choice2({nativeEvent}) {
+  var formData=new FormData();
+  var x=2;
+  formData.append("val",x);
+  var xhr=new XMLHttpRequest();
+  xhr.open('POST','http://127.0.0.1:5000/val',true);
+  xhr.send(formData);
+}
+Choice3({nativeEvent}) {
+  var formData=new FormData();
+  var x=3;
+  formData.append("val",x);
+  var xhr=new XMLHttpRequest();
+  xhr.open('POST','http://127.0.0.1:5000/val',true);
+  xhr.send(formData);
+}
+Choice4({nativeEvent}) {
+  var formData=new FormData();
+  var x=4;
+  formData.append("val",x);
+  var xhr=new XMLHttpRequest();
+  xhr.open('POST','http://127.0.0.1:5000/val',true);
+  xhr.send(formData);
+}
+Choice5({nativeEvent}) {
+  var formData=new FormData();
+  var x=5;
+  formData.append("val",x);
+  var xhr=new XMLHttpRequest();
+  xhr.open('POST','http://127.0.0.1:5000/val',true);
+  xhr.send(formData);
+}
+
 showDropdownMenu(event) {
     event.preventDefault();
     this.setState({ displayMenu: true }, () => {
@@ -36,17 +77,36 @@ showDropdownMenu(event) {
 
           { this.state.displayMenu ? (
           <ul>
-         <li><a href="#Arabic">Arabic</a></li>
-         <li><a href="#Bengali">Bengali</a></li>
-         <li><a href="#English">English</a></li>
-         <li><a href="#Hindi">Hindi</a></li>
-         <li><a href="#Hiragana">Hiragana</a></li>
-         <li><a href="#Javanese">Javanese</a></li>
-         <li><a href="#Katakana">Katakana</a></li>
-         <li><a href="#Korean">Korean</a></li>
-         <li><a href="#Spanish">Spanish</a></li>
-         <li><a href="#Tamil">Tamil</a></li>
-         <li><a href="#Turkish">Turkish</a></li>
+         <li>
+         <a href="#Arabic">
+         <button onClick={(e) => this.Choice1(e)}>
+                     Arabic
+         </button>
+         </a></li>
+         <li>
+         <a href="#Bengali">
+         <button onClick={(e) => this.Choice2(e)}>
+                     Bengali
+         </button>
+         </a></li>
+         <li>
+         <a href="#Hindi">
+         <button onClick={(e) => this.Choice3(e)}>
+                     Hindi
+         </button>
+         </a></li>
+         <li>
+         <a href="#Korean">
+         <button onClick={(e) => this.Choice4(e)}>
+                     Korean
+         </button>
+         </a></li>
+         <li>
+         <a href="#Spanish">
+         <button onClick={(e) => this.Choice5(e)}>
+                     Spanish
+         </button>
+         </a></li>
           </ul>
         ):
         (
