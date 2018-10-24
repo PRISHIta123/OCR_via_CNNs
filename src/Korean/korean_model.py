@@ -13,7 +13,7 @@ SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # Default paths.
 DEFAULT_LABEL_FILE = os.path.join(SCRIPT_PATH,
-                                  './labels/2350-common-korean.txt')
+                                  './labels/256-common-korean.txt')
 DEFAULT_TFRECORDS_DIR = os.path.join(SCRIPT_PATH, 'tfrecords-output')
 DEFAULT_OUTPUT_DIR = os.path.join(SCRIPT_PATH, 'saved-model')
 

@@ -14,7 +14,6 @@
         this.endPaintEvent = this.endPaintEvent.bind(this);
         this.state = {username: ''};
         this.handleClick = this.handleClick.bind(this);
-        
       }
 
       isPainting = false;
@@ -85,12 +84,12 @@
 
       componentDidMount() {
         // Here we set up the properties of the canvas element. 
-        this.canvas.width = 256;
-        this.canvas.height = 256;
+        this.canvas.width = 64;
+        this.canvas.height = 64;
         this.ctx = this.canvas.getContext('2d');
         this.ctx.lineJoin = 'round';
         this.ctx.lineCap = 'round';
-        this.ctx.lineWidth = 5;
+        this.ctx.lineWidth = 3;
       }
 
       Classify({nativeEvent}) {

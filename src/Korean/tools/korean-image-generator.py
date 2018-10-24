@@ -16,7 +16,7 @@ SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # Default data paths.
 DEFAULT_LABEL_FILE = os.path.join(SCRIPT_PATH,
-                                  '../labels/2350-common-korean.txt')
+                                  '../labels/256-common-korean.txt')
 DEFAULT_FONTS_DIR = os.path.join(SCRIPT_PATH, '../fonts')
 DEFAULT_OUTPUT_DIR = os.path.join(SCRIPT_PATH, '../image-data')
 
@@ -61,7 +61,7 @@ def generate_korean_images(label_file, fonts_dir, output_dir):
         for font in fonts:
             total_count += 1
             image = Image.new('L', (IMAGE_WIDTH, IMAGE_HEIGHT), color=0)
-            font = ImageFont.truetype(font, 48)
+            font = ImageFont.truetype(font, 60)
             drawing = ImageDraw.Draw(image)
             w, h = drawing.textsize(character, font=font)
             drawing.text(

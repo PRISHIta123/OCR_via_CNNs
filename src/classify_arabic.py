@@ -15,25 +15,21 @@ def CLASSIFY():
 
     # Default paths.
     DEFAULT_LABEL_FILE = os.path.join(
-        SCRIPT_PATH, '../Arabic/labels/241-common-arabic.txt'
+        SCRIPT_PATH, '../Arabic/labels/60-common-arabic.txt'
     )
     DEFAULT_GRAPH_FILE = os.path.join(
         SCRIPT_PATH, '../Arabic/saved-model/optimized_arabic_tensorflow.pb'
     )
     def read_image(file):
         """Read an image file and convert it into a 1-D floating point array."""
-        with open(file, 'r+b') as f:
-            with Image.open(f) as image:
-                cover = resizeimage.resize_cover(image, [64, 64])
-                cover.save(file, image.format)
         file_content = tf.read_file(file)
         image = tf.image.decode_jpeg(file_content, channels=1)
         image = tf.image.convert_image_dtype(image, dtype=tf.float32)
         image = tf.reshape(image, [64*64])
         return image
 
-    label_file='./Arabic/labels/241-common-arabic.txt'
-    image='./New.jpeg'
+    label_file='./Arabic/labels/60-common-arabic.txt'
+    image='./New1.jpeg'
     graph_file='./Arabic/saved-model/optimized_arabic_tensorflow.pb'
     
 
@@ -62,13 +58,11 @@ def CLASSIFY():
         predictions = graph_sess.run(y, feed_dict={x: image_array,
                                                    keep_prob: 1.0})
         prediction = predictions[0]
-    arr=[]
-    # Get the indices that would sort the array, then only get the indices that
-    # correspond to the top 5 predictions.
-    sorted_indices = prediction.argsort()[::-1][:1]
-
-    index =sorted_indices[0]
-    label = labels[index]
-    return label
+    l=[]
+    sorted_indices = prediction.argsort()[::-1][:5]
+    for index in sorted_indices:
+        label = labels[index]
+        l.append(label)
+    return l
 
 

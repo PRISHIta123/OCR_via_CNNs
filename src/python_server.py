@@ -4,10 +4,11 @@ import classify_korean
 import classify_hindi
 import classify_arabic
 import classify_bengali
-import classify_spanish
+import classify_greek
 import python_move
 import sys
 import time
+import json
 from PIL import Image
 import os
 
@@ -27,34 +28,44 @@ def value():
 @app.route('/image',methods=['GET','POST'])
 def classify():
    i=request.form['image']
+   global v
    python_move.Move()
    im=Image.open(i)
-   global v
    if v=='1':
-      f=('New.jpeg')
+      f=('New1.jpeg')
       im.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR,f))
+      name=[]
       name=classify_arabic.CLASSIFY()
-      return '{}'.format(name)
+      n=' '.join(name)
+      return '{}'.format(n)
    elif v=='2':
-      f=('New.jpeg')
+      f=('New2.jpeg')
       im.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR,f))
+      name=[]
       name=classify_bengali.CLASSIFY()
-      return '{}'.format(name)
+      n=' '.join(name)
+      return '{}'.format(n)
    elif v=='3':
-      f=('New.jpeg')
+      f=('New3.jpeg')
       im.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR,f))
+      name=[]
       name=classify_hindi.CLASSIFY()
-      return '{}'.format(name)
+      n=' '.join(name)
+      return '{}'.format(n)
    elif v=='4':
-      f=('New.jpeg')
+      f=('New4.jpeg')
       im.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR,f))
+      name=[]
       name=classify_korean.CLASSIFY()
-      return '{}'.format(name)
+      n=' '.join(name)
+      return '{}'.format(n)
    elif v=='5':
-      f=('New.jpeg')
+      f=('New5.jpeg')
       im.save('%s/%s' % (PATH_TO_TEST_IMAGES_DIR,f))
-      name=classify_spanish.CLASSIFY()
-      return '{}'.format(name)
+      name=[]
+      name=classify_greek.CLASSIFY()
+      n=' '.join(name)
+      return '{}'.format(n)
    else:
       return 0
 

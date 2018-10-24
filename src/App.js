@@ -1,9 +1,9 @@
-// App.js
-
-    import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
     import './App.css';
     import Canvas from './canvas';
     import Dropdown from './Dropdown';
+    import Output from './Output';
+
     class App extends Component {
       render() {
         return (
@@ -21,6 +21,7 @@
                   </div>
                 </div>
               </Canvas>
+              <Output />
             </div>
           </Fragment>
         );
