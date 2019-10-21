@@ -27,7 +27,7 @@ Markdown==2.6.11
 MarkupSafe==1.0
 matplotlib==2.1.0
 mlxtend==0.9.1
-nltk==3.3
+nltk==3.4.5
 nodejs==0.1.1
 npm==0.1.1
 numpy==1.15.0
