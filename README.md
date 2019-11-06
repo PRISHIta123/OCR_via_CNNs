@@ -4,7 +4,7 @@ A React web Application that allows a user to select a language, and draw a char
 ![alt text](https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/Project1.jpeg.jpg)
 
 Prerequisites:
-Make sure you add the CORS plugin in your web browser(Chrome,Firefox) to allow Access Control Cross Origin file transfer.
+Make sure you add the CORS plugin in your web browser(Chrome,Firefox) to allow Access Control Cross Origin file transfer. You must also have node js installed on your system.
 
 To run the client app follow these steps:\
 1.Clone the repo\
