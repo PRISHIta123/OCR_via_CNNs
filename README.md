@@ -6,7 +6,7 @@ A React web Application that allows a user to select a language, and draw a char
   <img width="800" src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/beta.JPG">
   <img width="800" src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/e_hindi.JPG">
   <img width="800" src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/a_bengali.JPG">
-  <img src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/Project1.jpeg.jpg">
+  <img width="800" src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/korean.JPG">
 </p>
 
 Prerequisites:  
