@@ -1,5 +1,5 @@
 # Language_Character_Classifier
-A React web Application that allows a user to select a language, and draw a character belonging to that language on the React Canvas. The drawing is saved as a file blob on the React client and downloaded locally, that passes it to a flask server running a Python Classifier Script using TensorFlow. The final result includes the top 5 predicted characters of the selected language being displayed to the user.
+A React web Application that allows a user to select a language, and draw a character belonging to that language on the React Canvas. The drawing is saved as a file blob on the React client, that passes it to a flask server running a Python Classifier Script using TensorFlow. The final result includes the top 5 predicted characters of the selected language being displayed to the user.
 
 <p align="center">
   <img width="800" src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/List.JPG">
@@ -12,7 +12,7 @@ A React web Application that allows a user to select a language, and draw a char
 Prerequisites:  
 Make sure you add the CORS plugin in your web browser(Chrome,Firefox) to allow Access Control Cross Origin file transfer. You must also have node js installed on your system.  
 
-To run the client app follow these steps:
+To run the client app follow these steps:  
 1.Clone the repo  
 2.Open a command prompt window or terminal  
 3.Change to the directory containing the repo  
@@ -29,7 +29,6 @@ A server will start on http://127.0.0.1/5000/ (will not open in browser and do n
 Don't open the server at this point  
 
 To test the app:  
-
 1.Choose a language from the dropdown menu  
 2.Draw your character on the React App client and click Classify.  
 3.Repeat the above step one more time.  
