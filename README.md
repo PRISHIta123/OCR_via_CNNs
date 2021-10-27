@@ -1,5 +1,6 @@
-# Language_Character_Classifier
-A React web Application that allows a user to select a language, and draw a character belonging to that language on the React Canvas. The drawing is saved as a file blob on the React client, that passes it to a flask server running a Python Classifier Script using TensorFlow. The final result includes the top 5 predicted characters of the selected language being displayed to the user.
+# React Web App for Optical Character Recognition via Convolutional Neural Networks 
+
+A React web Application that allows a user to select a language, and draw a character belonging to that language on the React Canvas. The drawing is saved as a file blob on the React client, that passes it to a flask server running a Python CNN Classifier Script using TensorFlow. The final result includes the top 5 predicted characters of the selected language being displayed to the user.
 
 <p align="center">
   <img width="800" src="https://github.com/PRISHIta123/Language_Character_Classifier/blob/master/List.JPG">
@@ -11,7 +12,6 @@ A React web Application that allows a user to select a language, and draw a char
 
 Prerequisites:  
 Make sure you add the CORS plugin in your web browser(Chrome,Firefox) to allow Access Control Cross Origin file transfer. You must also have node js installed on your system.  
-
 To run the client app follow these steps:  
 1.Clone the repo  
 2.Open a command prompt window or terminal  
